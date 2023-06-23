@@ -2089,6 +2089,7 @@ wasm = true
 inherits = "release"
 opt-level = "z"
 lto = "fat"
+strip = "debuginfo"
 codegen-units = 1
 
 [profile.stress-test]
