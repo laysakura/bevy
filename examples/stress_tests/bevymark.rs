@@ -27,8 +27,6 @@ struct Bird {
 }
 
 fn main() {
-    std::env::set_var("BEVY_ASSET_ROOT", "bevy-website/assets/examples");
-
     App::new()
         .add_plugins((
             DefaultPlugins.set(WindowPlugin {

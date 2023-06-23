@@ -65,19 +65,8 @@ impl FileAssetIo {
     /// Else if the `CARGO_MANIFEST_DIR` environment variable is set, then its value will be used
     /// instead. It's set by cargo when running with `cargo run`.
     pub fn get_base_path() -> PathBuf {
-        if let Ok(env_bevy_asset_root) = env::var("BEVY_ASSET_ROOT") {
-            PathBuf::from(env_bevy_asset_root)
-        } else if let Ok(manifest_dir) = env::var("CARGO_MANIFEST_DIR") {
-            PathBuf::from(manifest_dir)
-        } else {
-            env::current_exe()
-                .map(|path| {
-                    path.parent()
-                        .map(|exe_parent_path| exe_parent_path.to_owned())
-                        .unwrap()
-                })
-                .unwrap()
-        }
+        // BEVY_ASSET_ROOT 環境変数をJSからWASMに渡す方法がわからなかったので酷いハードコーディング...
+        PathBuf::from("bevy-website/assets/examples")
     }
 
     /// Returns the root directory where assets are loaded from.
