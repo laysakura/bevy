@@ -1,3 +1,7 @@
+WASMサイズを小さくすることでパフォーマンスが向上することを示すため、ビルド方法をちょっとだけいじる。
+
+<https://github.com/laysakura/bevy-website> と連携して動く（websiteのほうからこちらがビルドされる）。
+
 # [![Bevy](assets/branding/bevy_logo_light_dark_and_dimmed.svg)](https://bevyengine.org)
 
 [![Crates.io](https://img.shields.io/crates/v/bevy.svg)](https://crates.io/crates/bevy)
